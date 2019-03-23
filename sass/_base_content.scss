@@ -1,0 +1,167 @@
+//////////////// MAIN //////////////
+.main {
+  margin-top: 3rem;
+}
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  min-width: 450px;
+}
+
+//////// SECTION /////////////////
+.section {
+  width: 100%;
+  position: relative;
+  .caption-of-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .caption-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      text-align: left;
+    }
+    .wr-button-sign {
+      button {
+        background-color: red;
+        color: white;
+        padding: 3px;
+        border: none;
+      }
+      span {
+        font-size: 0.9rem;
+        color: grey;
+      }
+    }
+  }
+
+  .wr-content {
+    width: 100%;
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    .figure {
+      width: 19.5%;
+      margin-right: 2px;
+      @media only screen and(max-width: $bp-medium) {
+        width: 33%;
+      }
+      @media only screen and(max-width: $bp-small) {
+        width: 50%;
+      }
+
+      .wr-img {
+        position: relative;
+        width: 100%;
+        background-size: cover;
+        img {
+          width: 100%;
+        }
+        .time {
+          position: absolute;
+          bottom: 5px;
+          right: 3px;
+          background-color: black;
+          color: white;
+          font-size: 0.7rem;
+          text-align: center;
+        }
+        .clock {
+          display: none;
+          position: absolute;
+          top: 3px;
+          right: 3px;
+          background-color: black;
+          color: white;
+        }
+        &:hover .clock {
+          display: block;
+        }
+      }
+      figcaption {
+        width: 100%;
+        font-size: 0.7rem;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      h6 {
+        font-size: 0.5rem;
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+  .arrow-circle-right,
+  .arrow-circle-left {
+    font-size: 25px;
+    color: grey;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+  }
+  .arrow-circle-right {
+    right: -15px;
+  }
+  .arrow-circle-left {
+    left: -15px;
+  }
+  hr {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+///////////// SETTINGS SECTIONS /////////////
+.section {
+  &__1 {
+    .arrow-circle-right {
+      display: none;
+    }
+    .arrow-circle-left {
+      display: none;
+    }
+  }
+
+  &__2 {
+    .caption-icon {
+      display: none;
+    }
+
+    .arrow-circle-left {
+      display: none;
+    }
+  }
+
+  &__3 {
+    .caption-icon {
+      display: none;
+    }
+    .wr-button-sign {
+      display: none;
+    }
+  }
+
+  &__4 {
+    .arrow-circle-left {
+      display: none;
+    }
+  }
+
+  &__5 {
+    .arrow-circle-right {
+      display: none;
+    }
+  }
+}
